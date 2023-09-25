@@ -1,0 +1,33 @@
+#root2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards{
+    background-color: rgb(84, 228, 221);
+    position: relative;
+    width: 400px;
+    height: fit-content;
+    margin: 20px;
+}
+.subhead{
+    background-color: rgb(18, 168, 228);
+    height: 80px;
+
+}
+.cards #dp{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 100px;
+}
+.cards h1{
+    padding: 20px;
+}
+.cards p{
+    border: 1px solid #000000;
+	
+	overflow: hidden;
+}
