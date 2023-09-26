@@ -1,22 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { StrictMode, useEffect, useState } from 'react';
 import ReactDOM  from 'react-dom';
-import './App.css';
+
 import Card from './card';
-import characters from './characters'
+
 import  Axios  from 'axios';
-let id,searching=false,founddata=false,searchdata
-function creatcard(characters){
+let searching=false,founddata=false,searchdata
+function creatcard(characters,i){
  
-id=characters.name
   return(
-    <div> 
-         <Card
-        // key={characters.key}
+   <Card key={i}
          name={characters.name}
          about={characters.about}
          img={characters.img}
          ></Card>
-       </div>
+      
      )
 }
 
@@ -49,9 +46,12 @@ useEffect(()=>{
     },[])
 
   return (
-    <div id="root2">
+    <StrictMode>
+    <div id='root2'>
    {searching?founddata?creatcard({...foundit}):<h1>No Match Found!!!!</h1>:data.map(creatcard) }
- </div> 
+   </div>
+   </StrictMode>
+
   )
 }
 

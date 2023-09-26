@@ -39,7 +39,7 @@ app.get('/getdata',async function(req,res){
 
 })
 app.post('/adddata',function(req,res){
-    console.log(req.body.about)
+  
     const charater=new animemodel({
         name:req.body.name,
         about:req.body.about,
